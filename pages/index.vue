@@ -53,7 +53,9 @@
                 <li><input id="r1" name="r1" type="radio"><label for="r1">Oui</label><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"></svg></li>
                 <li><input id="r2" name="r1" type="radio"><label for="r2">Non</label><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"></svg></li>
               </ul>
-				    </form>
+
+			  <button class="btn btn-gum">Accéder au contenu</button>
+		     </form>
           </div>
       </div>
     </div>

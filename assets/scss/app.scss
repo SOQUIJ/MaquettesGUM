@@ -19,6 +19,14 @@ $theme-colors: (
 );
 $primary: #223654;
 
+$btn-padding-y:               0;
+$btn-padding-x:               35px;
+$btn-font-family:             $font-family-sans-serif;
+$btn-font-size:               20px;
+$btn-border-weight:           bold;
+$btn-line-height:             72px;
+$btn-border-radius:           8px;
+$btn-border-width:            3px;
 
 // All of bootstrap
 @import "node_modules/bootstrap/scss/bootstrap";

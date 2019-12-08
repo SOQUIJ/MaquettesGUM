@@ -1,13 +1,15 @@
 /** BOUTONS */
 
+
 .btn-gum {
     background-color: white;
-    border-color: blue;
+    border-color: #095797;
+    color: #095797;
     transition: background-color .5s, color .5s;
 
     &:hover, &:focus {
 
-        background-color: blue;
+        background-color: #095797;
         color: white;
     }
 
