@@ -1,0 +1,41 @@
+
+h1 {
+    font: Bold 48px/56px Roboto;
+    color: white;
+    padding-bottom: 55px;
+  
+    &::after {
+  
+      content: "";
+      display: block;
+      position: relative;
+      top: 16px;
+      width: 50px;
+      height: 5px;
+      background: #F09686 0% 0% no-repeat padding-box;
+  
+    }
+  
+  }
+  
+  h2 {
+    font: Bold 36px/50px Roboto;
+    margin-top: 72px;
+    margin-bottom: 36px;
+  
+    &:first-of-type {
+      margin-top: 0;
+    }
+  
+  }
+
+  h2.light {
+
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 48px;
+    color: #095797;
+    margin-bottom: 16px;
+  
+  }
+  

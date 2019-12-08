@@ -1,0 +1,60 @@
+/** LAYOUT */
+
+html, body, #__nuxt, #__layout {
+ 
+    @include media-breakpoint-up(md) {    
+       height: 100%;
+    }
+  }
+  
+  body {
+  
+    padding-top: 170px;
+  
+    @include media-breakpoint-up(md) {    
+      background: linear-gradient(90deg, $primary 21%, #FFFFFF 0%);
+    }
+  
+    .container {
+  
+      @include media-breakpoint-up(sm) {    
+        max-width: 1440px;
+      }
+    }
+  }
+
+  .col-gauche {
+
+    padding-top: 100px;
+    padding-bottom: 20px;
+  
+    @include media-breakpoint-up(md) {    
+      padding-bottom: 3333px;
+      margin-bottom: -3333px;
+    }
+  
+    .fixe {
+  
+      max-width: 75%;
+      margin: 0 auto;
+      
+      @media (min-width: 768px) and (max-width: 1126px) {
+  
+        position: fixed;
+        top: 150px;
+        max-width: 280px;
+        z-index: 1030;
+      }
+  
+      @media (min-width: 1127px) {
+        position: fixed;
+        max-width: 400px;
+      }    
+    }
+  }
+  
+  .texte-principal {
+      padding-top: 100px;
+      max-width: 75%;
+      margin: 0 auto;
+  }
