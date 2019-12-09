@@ -10,7 +10,21 @@
     &:hover, &:focus {
 
         background-color: #095797;
+        box-shadow: none;
         color: white;
     }
+
+}
+
+
+#myBtn {
+
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 60px;
+    background: #223654 0% 0% no-repeat padding-box;
+    box-shadow: 0px 5px 15px #22365433;
+    opacity: 1;
 
 }

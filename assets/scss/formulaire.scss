@@ -79,11 +79,17 @@ form {
 	border-radius: 50%;
 }
 
+
 .ac-custom input[type="checkbox"]:checked + label,
-.ac-custom input[type="radio"]:checked + label {
-	color: #333;
+.ac-custom input[type="radio"]:checked + label,
+.ac-custom input[type="checkbox"]:focus + label,
+.ac-custom input[type="radio"]:focus + label {
+	color:#095797;
 } 
 
+
+.ac-custom input[type="checkbox"]:checked + label::before,
+.ac-custom input[type="radio"]:checked + label::before,
 .ac-custom input[type="checkbox"]:checked + label::before,
 .ac-custom input[type="radio"]:checked + label::before {
 	opacity: 0.8;

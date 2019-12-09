@@ -1,43 +1,11 @@
 <template>
 <div class="h-100">
-  <header class="fixed-top">
-    <nav class="container navigation-principale" aria-label="Navigation principale">
-      <div class="row">
-        <div class="col-2 col-sm-4 col-md-4 bg-primary text-white">
-          <a href="#" class="logo"><img src="@/static/img/logo_white.png" alt=""><span class="sr-only">Page d'accueil du GUM</span></a>
-        </div>
-        <div class="col-10 col-sm-8 col-md-8 bg-white nav-droite">
-
-          <ul>
-              <li>
-                <button><img src="@/static/img/search.svg" alt=""><span class="sr-only">Chercher sur ce site</span></button>
-              </li>
-              <li>
-                <a href="#">Nous joindre</a>
-              </li>
-              <li>
-                <a href="#">English</a>
-              </li>
-              <li>
-                <button><img src="@/static/img/burger.svg" alt=""><span class="sr-only">Ouvrir le menu</span></button>
-              </li>
-            </ul>
-        </div>
-      </div>
-    </nav>
-    <nav aria-label="breadcrumb" class="bg-qc-ca">
-      <ol class="breadcrumb container">
-        <li class="breadcrumb-item"><a href="#">Accueil</a></li>
-        <li class="breadcrumb-item"><a href="#">Famille</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Divorce</li>
-      </ol>
-    </nav>
-  </header>
+  <navbar />
   <main class="container h-100">
     <div class="row h-100">
       <div class=" col-gauche col-xs-12 col-sm-12 col-md-4 h-100 bg-primary text-white">      
           <div class="fixe">
-            <h1>Lorem ipsum dolor sit</h1>
+            <h1>Domicile:<br>Qui doit rester, qui<br>doit partir</h1>
             <p>Ce contenu s’adresse à :</p>
             <ul>
               <li class="animated delay-1 faster fadeInLeft"><img src="@/static/img/mariage.png" alt="">Mariés</li>
@@ -78,7 +46,7 @@
 
           </div>
 
-            <button @click="scrolltop" id="myBtn" v-show="showScrollBtn" title="Go to top">Top</button>
+            <button @click="scrolltop" id="myBtn" v-show="showScrollBtn" title="Go to top"><img src="@/static/img/up.svg" alt=""><span class="sr-only">Retour en haut</span></button>
 
       </div>
     </div>
@@ -89,7 +57,12 @@
 </template>
 
 <script>
+import navbar from "@/components/navbar"
+
 export default {
+  components: {
+	navbar
+  },
   data () {
     return {
       showScrollBtn: false
