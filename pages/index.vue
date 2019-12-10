@@ -7,7 +7,6 @@
 				<div class="fixe">
 					<h1>Domicile:<br>Qui doit rester, qui<br>doit partir</h1>
 					<p>Sélectionner l'une des options suivantes</p>
-
 				</div>         
 			</div>
 			<div class="col-droite col-xs-12 col-sm-12 col-md-8">

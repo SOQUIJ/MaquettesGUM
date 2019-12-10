@@ -12,7 +12,9 @@ html, body, #__nuxt, #__layout {
     padding-top: 170px;
   
     @include media-breakpoint-up(md) {    
-      background: linear-gradient(90deg, $primary 21%, #FFFFFF 0%);
+      background-image: url('/static/img/interrogation.png'), linear-gradient(90deg, $primary 41%, #FFFFFF 0%);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
     }
   
     .container {
