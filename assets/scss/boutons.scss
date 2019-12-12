@@ -22,9 +22,19 @@
     width: 60px;
     height: 60px;
     line-height: 60px;
+    background: #223654;
+    padding: 0;
+    border-color: transparent;
     border-radius: 60px;
-    background: #223654 0% 0% no-repeat padding-box;
-    box-shadow: 0px 5px 15px #22365433;
+    box-shadow: 4px 3px 5px -1px rgba(0,0,0,0.5);  
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+#myBtn {
+
+    visibility: visible;
     opacity: 1;
 
 }

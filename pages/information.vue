@@ -16,7 +16,7 @@
       </div>
       <div class="col-droite col-xs-12 col-sm-12 col-md-8">
 
-          <div class="texte-principal animated fadeInUp delay-1">
+          <div class="col-droite texte-principal animated fadeInUp delay-1">
 
             <h2>Lorem, ipsum.</h2>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus natus vero fugiat. Rem praesentium repellendus optio repellat sint odit pariatur ab consequatur repudiandae aperiam atque, quaerat itaque placeat dolorem laborum.</p>
