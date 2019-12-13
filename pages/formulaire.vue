@@ -1,5 +1,5 @@
 <template>
-	<div class="h-100">
+	<div class="formulaire h-100">
 		<navbar />
 		<main class="container h-100">
 			<div class="row h-100">

@@ -40,35 +40,40 @@ $btn-border-width:            3px;
 @import "@/assets/scss/layout";
 @import "@/assets/scss/formulaire";
 
-.delay-1 {
-animation-delay: .25s;
-}
-.delay-2 {
-animation-delay: .5s;
-}
-.delay-3 {
-animation-delay: .75s;
-}
 
-.col-gauche {
 
-    ul {
-        list-style-type: none;
-        margin: 32px 0 0 0;
-        padding: 0;
-  
-        li {
-          margin-bottom: 32px;
-  
-          img {
-            margin-right: 16px;
+
+  .delay-1 {
+    animation-delay: .25s;
+  }
+  .delay-2 {
+    animation-delay: .35s;
+  }
+  .delay-3 {
+    animation-delay: .40s;
+  }
+    
+    .col-gauche {
+    
+        ul {
+            list-style-type: none;
+            margin: 32px 0 0 0;
+            padding: 0;
+      
+            li {
+              margin-bottom: 32px;
+      
+              img {
+                margin-right: 16px;
+              }
+            }
           }
-        }
-      }
+    
+    }
+    
+    .col-droite {
+      max-width: 70%;
+      margin: 0 auto
+    }
 
-}
 
-.col-droite {
-  max-width: 70%;
-  margin: 0 auto
-}

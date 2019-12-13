@@ -40,18 +40,28 @@ export default {
 
   mounted () {
 
-    var navBar = document.getElementById('navBar');
-    document.addEventListener("scroll", function() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            navBar.className = ('fixed-top bg-white');
-        } else {
-            navBar.className =  ('fixed-top');
-        }
-    });
+    this.animateElementsOnScroll();
 
+  },
+  methods: {
 
-  }
-    
+    animateElementsOnScroll() {
+
+      var elNavBar = document.getElementById('navBar'),
+          elBtnUp = document.getElementById('btnUp');
+
+      document.addEventListener("scroll", function() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              navBar.className = ('fixed-top bg-white');
+              btnUp.className = ('visible')
+          } else {
+              navBar.className =  ('fixed-top');
+              btnUp.className = ('')
+          }
+      });
+
+    }
+  }    
 }
 </script>
 

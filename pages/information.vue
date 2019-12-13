@@ -8,9 +8,9 @@
             <h1>Domicile:<br>Qui doit rester, qui<br>doit partir</h1>
             <p>Ce contenu s’adresse à :</p>
             <ul>
-              <li class="animated delay-1 faster fadeInLeft"><img src="@/static/img/mariage.png" alt="">Mariés</li>
-              <li class="animated delay-2 faster fadeInLeft"><img src="@/static/img/proprietaire.png" alt="">Propriétaires</li>
-              <li class="animated delay-3 faster fadeInLeft"><img src="@/static/img/two_signature.png" alt="">2 noms sur l’acte de propriété</li>
+              <li class="animated delay-1 fadeInLeft"><img src="@/static/img/mariage.png" alt="">Mariés</li>
+              <li class="animated delay-2 fadeInLeft"><img src="@/static/img/proprietaire.png" alt="">Propriétaires</li>
+              <li class="animated delay-3 fadeInLeft"><img src="@/static/img/two_signature.png" alt="">2 noms sur l’acte de propriété</li>
             </ul>
           </div>         
       </div>
@@ -46,7 +46,7 @@
 
           </div>
 
-            <button @click="scrolltop" id="myBtn" v-show="showScrollBtn" title="Go to top"><img src="@/static/img/up.svg" alt=""><span class="sr-only">Retour en haut</span></button>
+            <button @click="scrolltop" id="btnUp" class="hidden" title="Go to top"><img src="@/static/img/up.svg" alt=""><span class="sr-only">Retour en haut</span></button>
 
       </div>
     </div>
@@ -61,37 +61,23 @@ import navbar from "@/components/navbar"
 
 export default {
   components: {
-	navbar
+	  navbar
   },
-  data () {
-    return {
-      showScrollBtn: false
-    }
-  },
-  mounted () {
-    var $this = this;
-    document.addEventListener("scroll", function() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            $this.showScrollBtn = true;
-        } else {
-            $this.showScrollBtn = false;
-        }
-    });
+  mounted() {
+    this.scrolltop();
   },
   methods: {
+
     scrolltop () {
+
       window.scroll({
         top: 0, 
         left: 0, 
         behavior: 'smooth'
       });
+
     }
+
   }
 }
 </script>
-
-<style lang="scss">
-
-
-
-</style>

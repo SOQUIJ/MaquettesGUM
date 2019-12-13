@@ -1,14 +1,29 @@
 <template>
-    <div class="accueil">
+    <div class="accueil h-100">
         <navbar />
-        <div class="container">
-            <h1>Bienvenue</h1>
+        <main class="container">
 
-            <p>
-                <nuxt-link to="formulaire">Formulaire</nuxt-link>
-            </p>
+            <div class="row">
+                <div class="col-md-4 col-gauche">
 
-        </div>
+                    <h1>Bienvenue</h1>
+
+
+                </div>
+                <div class="col-md-6 col-droite">
+                    <div class="inner">
+
+                        <h2>Listes des pages</h2>
+                        <ul>
+                           <li><nuxt-link to="formulaire">Formulaire</nuxt-link></li> 
+                           <li><nuxt-link to="information">Page d'information</nuxt-link></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+        </main>
     </div>
 </template>
 
@@ -23,29 +38,43 @@ export default {
 }
 </script>
 
-<style lang="scss" scope>
+<style lang="scss" scoped>
+
+
 
 .accueil {
 
-    .breadcrumb {
-        display: none;
+
+
+    header {
+
+        .navigation-principale {
+
+            background-color: #095797;
+
+            a {
+                color: #FFFFFF;
+            }
+        }
+
+        .breadcrumb {
+            display: none;
+        }        
+
     }
 
-    .navigation-principale {
-        background-color: #095797;
-        a {
-            color: #FFFFFF;
+    main {
+
+        .col-droite {
+
+            .inner {
+
+                padding-top: 105px;
+                max-width: 70%;
+            
+            }
         }
     }
-
-    body {
-        background-image: none;
-    }
-
-    h1 {
-        color: #223654;
-    }
-
 }
 
 
