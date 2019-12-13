@@ -33,6 +33,11 @@
     position: fixed;
     bottom: 30px;
     right: 30px;
+
+    img {
+        position: relative;
+        top: -2px;    
+    }
 }
 
 #btnUp.visible {
