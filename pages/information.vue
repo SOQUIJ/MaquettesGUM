@@ -4,7 +4,7 @@
   <main class="container h-100">
     <div class="row h-100">
       <div class=" col-gauche col-xs-12 col-sm-12 col-md-4 h-100 bg-primary text-white">      
-          <div class="fixe">
+          <div class="inner">
             <h1>Domicile:<br>Qui doit rester, qui<br>doit partir</h1>
             <p>Ce contenu s’adresse à :</p>
             <ul>
@@ -16,7 +16,7 @@
       </div>
       <div class="col-droite col-xs-12 col-sm-12 col-md-8">
 
-          <div class="col-droite texte-principal animated fadeInUp delay-1">
+          <article class="animated fadeInUp delay-1">
 
             <h2>Lorem, ipsum.</h2>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus natus vero fugiat. Rem praesentium repellendus optio repellat sint odit pariatur ab consequatur repudiandae aperiam atque, quaerat itaque placeat dolorem laborum.</p>
@@ -44,9 +44,9 @@
             <p>Nostrum, dolorum ipsam laudantium quo numquam debitis aliquid minima enim magni beatae, quas, nisi optio eaque animi quae quidem amet totam id ducimus? Dolore expedita, aliquid perspiciatis doloremque earum illo.</p>
             <p>Magni, officia sed vero animi qui accusamus exercitationem itaque aspernatur nesciunt ipsam illum aliquid, numquam aliquam repellat praesentium repudiandae omnis? Nisi, quidem perferendis? Sunt praesentium saepe veniam incidunt nobis ad?</p>
 
-          </div>
+          </article>
 
-            <button @click="scrolltop" id="btnUp" class="hidden" title="Go to top"><img src="@/static/img/up.svg" alt=""><span class="sr-only">Retour en haut</span></button>
+          <btnup />
 
       </div>
     </div>
@@ -58,26 +58,12 @@
 
 <script>
 import navbar from "@/components/navbar"
+import btnup from '@/components/buttonup'
 
 export default {
   components: {
-	  navbar
-  },
-  mounted() {
-    this.scrolltop();
-  },
-  methods: {
-
-    scrolltop () {
-
-      window.scroll({
-        top: 0, 
-        left: 0, 
-        behavior: 'smooth'
-      });
-
-    }
-
+    navbar,
+    btnup
   }
 }
 </script>

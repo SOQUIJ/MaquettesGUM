@@ -3,28 +3,28 @@
 		<navbar />
 		<main class="container h-100">
 			<div class="row h-100">
-			<div class="col-gauche col-xs-12 col-sm-12 col-md-4 h-100 bg-primary text-white">      
-				<div class="fixe">
-					<h1>Domicile:<br>Qui doit rester, qui<br>doit partir</h1>
-					<p>Sélectionner l'une des options suivantes</p>
-				</div>         
-			</div>
-			<div class="col-droite col-xs-12 col-sm-12 col-md-8">
-				<div class="col-droite texte-principal">
-					<form class="ac-custom ac-radio ac-fill" autocomplete="off">
-					<h2 class="light">Êtes-vous tous les deux sur l’acte de propriété ?</h2>
-					<p>
-						Avant le 31 décembre 1990, les époux pouvait signer un document chez le notaire ou faire une déclaration devant le tribunal pour que les règles du patrimoine ne s’applique pas à eux.
-					</p>
-					<ul>
-						<li><input id="r1" name="r1" type="radio"><label for="r1">Oui</label><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"></svg></li>
-						<li><input id="r2" name="r1" type="radio"><label for="r2">Non</label><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"></svg></li>
-					</ul>
-
-					<button @click.prevent="gotoinfo" class="btn btn-gum">Accéder au contenu</button>
-					</form>
+				<div class="col-gauche col-xs-12 col-sm-12 col-md-4 h-100 bg-primary text-white">      
+					<div class="fixe">
+						<h1>Domicile:<br>Qui doit rester, qui<br>doit partir</h1>
+						<p>Sélectionner l'une des options suivantes</p>
+					</div>         
 				</div>
-			</div>
+				<div class="col-droite col-xs-12 col-sm-12 col-md-8">
+
+					<form class="ac-custom ac-radio ac-fill" autocomplete="off">
+						<h2 class="light">Êtes-vous tous les deux sur l’acte de propriété ?</h2>
+						<p>
+							Avant le 31 décembre 1990, les époux pouvait signer un document chez le notaire ou faire une déclaration devant le tribunal pour que les règles du patrimoine ne s’applique pas à eux.
+						</p>
+						<ul>
+							<li><input id="r1" name="r1" type="radio"><label for="r1">Oui</label><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"></svg></li>
+							<li><input id="r2" name="r1" type="radio"><label for="r2">Non</label><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"></svg></li>
+						</ul>
+
+						<button @click.prevent="gotoinfo" class="btn btn-gum">Accéder au contenu</button>
+					</form>
+
+				</div>
 			</div>
 		</main>
 	</div>
@@ -208,14 +208,6 @@ export default {
     padding-bottom: 0;
     margin-bottom: 0;
   }
-.col-droite {
-
-  .text-principal {
-
-    max-width: 85% !important;
-  }
-
-}
 
 
 </style>

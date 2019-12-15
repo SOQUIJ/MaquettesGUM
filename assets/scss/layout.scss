@@ -12,9 +12,8 @@ html, body, #__nuxt, #__layout {
     padding-top: 170px;
   
     @include media-breakpoint-up(md) {    
-      background-image: url('/static/img/interrogation.png'), linear-gradient(90deg, $primary 41%, #FFFFFF 0%);
-      background-repeat: no-repeat;
-      background-attachment: fixed;
+      background: rgba(255,255,255,1);
+      background: linear-gradient(90deg, rgba(34,54,84,1) 41%, rgba(255,255,255,1) 41%);
     }
   
     .container {
@@ -35,9 +34,9 @@ html, body, #__nuxt, #__layout {
       margin-bottom: -3333px;
     }
   
-    .fixe {
+    .inner {
   
-      max-width: 75%;
+      max-width: 100%;
       margin: 0 auto;
       
       @media (min-width: 768px) and (max-width: 1126px) {
@@ -50,13 +49,27 @@ html, body, #__nuxt, #__layout {
   
       @media (min-width: 1127px) {
         position: fixed;
-        max-width: 400px;
+        max-width: 450px;
       }    
     }
   }
   
-  .texte-principal {
+.col-droite {
+
+  article, form {
       padding-top: 100px;
-      max-width: 75%;
+      max-width: 690px;
       margin: 0 auto;
-  }
+
+      section {
+        margin-top: 52px;
+
+          &:first-of-type {
+            margin-top: 0;
+          }
+      }
+
+  }  
+
+}
+

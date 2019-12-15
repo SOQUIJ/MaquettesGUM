@@ -4,22 +4,20 @@
         <main class="container">
 
             <div class="row">
-                <div class="col-md-4 col-gauche">
-
-                    <h1>Bienvenue</h1>
-
-
-                </div>
-                <div class="col-md-6 col-droite">
+                <div class="col-md-4 col-gauche bg-primary">
                     <div class="inner">
-
+                        <h1>Maquettes</h1>
+                    </div>                   
+                </div>
+                <div class="col-md-8 col-droite">
+                    <article>
                         <h2>Listes des pages</h2>
                         <ul>
                            <li><nuxt-link to="formulaire">Formulaire</nuxt-link></li> 
                            <li><nuxt-link to="information">Page d'information</nuxt-link></li>
                         </ul>
 
-                    </div>
+                    </article>
                 </div>
             </div>
 
@@ -39,44 +37,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-
-
-.accueil {
-
-
-
-    header {
-
-        .navigation-principale {
-
-            background-color: #095797;
-
-            a {
-                color: #FFFFFF;
-            }
-        }
-
-        .breadcrumb {
-            display: none;
-        }        
-
-    }
-
-    main {
-
-        .col-droite {
-
-            .inner {
-
-                padding-top: 105px;
-                max-width: 70%;
-            
-            }
-        }
-    }
-}
-
 
 
 </style>

@@ -17,6 +17,22 @@
 }
 
 
+.btn-inverse {
+    background-color: #095797;
+    border-color: white;
+    color: white;
+    transition: background-color .5s, color .5s;
+
+    &:hover, &:focus {
+
+        background-color: white;
+        box-shadow: none;
+        color: #095797;
+    }
+
+}
+
+
 #btnUp {
 
     width: 60px;
