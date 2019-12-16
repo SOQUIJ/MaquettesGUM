@@ -9,8 +9,8 @@
                     <p>Ce contenu s'adresse aux ...</p>
                     <nav>
                         <ul>
-                            <li><a @click="scrollIt('couples-maries')" href="#couples-maries"><img src="@/static/img/fleche-blanche.png" alt=""><span class="fleche"></span>Couples mariés</a></li>
-                            <li><a @click="scrollIt('conjoints-de-fait')" href="#conjoints-de-fait"><img src="@/static/img/fleche-rose.png" alt=""><span class="fleche"></span>Conjoints de faits</a></li>
+                            <li><a @click="scrollIt('couples-maries', $event);" href="#couples-maries" :class="{'actif disabled':marier}"><span class="triangle" aria-hidden="true"></span>Couples mariés</a></li>
+                            <li><a @click="scrollIt('conjoints-de-fait', $event);" href="#conjoints-de-fait" :class="{'actif disabled':conjoint}"><span class="triangle" aria-hidden="true"></span>Conjoints de faits</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -48,9 +48,14 @@ import btnup from '@/components/buttonup'
 
 export default {
 
-    mounted() {
+    data() {
       
+        return {
+ 
+            marier: true,
+            conjoint: false
 
+        }
                
     },
     components: {
@@ -62,34 +67,18 @@ export default {
 
         scrollIt(destination) {
 
-             this.$nextTick(function () {
+            /* Pour désactiver le lien actif */
+             this.marier = !this.marier;
+             this.conjoint = !this.conjoint;
 
-              /*  var el = document.getElementById(destination);
-                el.scrollIntoView({ behavior: 'smooth', });
-                setTimeout(() => {
-                    window.scrollBy(0,-20)
-                }, 100);  */
+            /* Déterminer la position de l'ancre dans la page relativement au bas de la barre de navigation */
+            var el = document.getElementById(destination),
+                topPos = el.offsetTop - 92;      
 
-
-              /*  el.scrollIntoView();
-
-                setTimeout(() => {
-                    window.scrollBy(0,-270)
-                }, 100);                
-            */
-
-   /*         const yOffset = -270; 
-            const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-            window.scrollTo({top: y, behavior: 'smooth'})*/
-
-
-            })
-var el = document.getElementById(destination);
-const yOffset = -270; 
-            const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-            window.scrollTo({top: y, behavior: 'smooth'})
-
-
+            setTimeout(() => {
+                document.body.scrollTop = topPos; // Pour Safari et Edge
+                document.documentElement.scrollTop = topPos; // Pour les autres
+            }, 10);              
         }
     }
 }
@@ -99,7 +88,84 @@ const yOffset = -270;
 <style lang="scss">
 
 .col-gauche {
-    a { color: white}
+
+    ul {
+
+        margin-top: 45px;
+
+        li {
+            margin-bottom: 16px;
+
+
+            a { 
+                color: #F09686;
+                position: relative;
+                left: 0;
+                
+                .triangle {
+                    display: inline-block;
+                    position: relative;
+                    top: 1px;
+                    margin-right: 8px;
+                    width: 0;
+                    height: 0;
+                    border-right: 10px solid transparent;
+                    border-left: 10px solid transparent;
+                    border-bottom: 16px solid #F09686;
+                    transition: all .3s ease-in-out;
+
+                    &:after {
+                        content: "";
+                        display:inline-block;
+                        position:absolute;
+                        width: 0;
+                        height: 0;    
+                        top: 4px;
+                        left: -6px;
+                        border-left: 6px solid transparent;
+                        border-right: 6px solid transparent;
+                        border-bottom: 10px solid #223654;
+                    }
+
+                }
+
+                &:hover  {
+
+                    text-decoration: none;
+
+                    .triangle {
+                        top: 4px;
+                        transform: rotate(90deg);
+                        margin-right: 14px;
+                    }       
+                } 
+
+
+            }
+
+            a.actif {
+
+                color: #FFFFFF;
+
+                .triangle {
+                    top: 4px;
+                    border-bottom: 16px solid #FFFFFF;
+                    transform: rotate(90deg);
+                    margin-right: 14px;
+                }
+
+            }
+
+
+            a.disabled {
+                pointer-events: none;
+            }
+    
+        }        
+
+    }
+
 }
+
 
 </style>

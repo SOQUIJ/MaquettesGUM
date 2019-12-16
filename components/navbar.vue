@@ -52,10 +52,10 @@ export default {
 
       document.addEventListener("scroll", function() {
           if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-              navBar.className = ('fixed-top bg-white');
+              /*navBar.className = ('fixed-top bg-white');*/
               btnUp.className = ('visible')
           } else {
-              navBar.className =  ('fixed-top');
+             /* navBar.className =  ('fixed-top');*/
               btnUp.className = ('')
           }
       });
