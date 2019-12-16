@@ -14,7 +14,8 @@
                         <h2>Listes des pages</h2>
                         <ul>
                            <li><nuxt-link to="formulaire">Formulaire</nuxt-link></li> 
-                           <li><nuxt-link to="information">Page d'information</nuxt-link></li>
+                           <li><nuxt-link to="information">Information qualifiée</nuxt-link></li>
+                           <li><nuxt-link to="nonqualifie">Information non qualifiée</nuxt-link></li>
                         </ul>
 
                     </article>

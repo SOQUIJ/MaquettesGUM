@@ -9,14 +9,14 @@
                     <p>Ce contenu s'adresse aux ...</p>
                     <nav>
                         <ul>
-                            <li><a @click="scrollIt('couples-maries', $event);" href="#couples-maries" :class="{'actif disabled':marier}"><span class="triangle" aria-hidden="true"></span>Couples mariés</a></li>
-                            <li><a @click="scrollIt('conjoints-de-fait', $event);" href="#conjoints-de-fait" :class="{'actif disabled':conjoint}"><span class="triangle" aria-hidden="true"></span>Conjoints de faits</a></li>
+                            <li class="animated delay-1 fadeInLeft"><a @click="scrollIt('couples-maries', $event);" href="#couples-maries" :class="{'actif disabled':marier}"><span class="triangle" aria-hidden="true"></span>Couples mariés</a></li>
+                            <li class="animated delay-2 fadeInLeft"><a @click="scrollIt('conjoints-de-fait', $event);" href="#conjoints-de-fait" :class="{'actif disabled':conjoint}"><span class="triangle" aria-hidden="true"></span>Conjoints de faits</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
             <div class="col-md-8 col-droite">
-                <article>
+                <article class="animated fadeInUp delay-3">
                     <section>
                         <h2 id="couples-maries">Couples mariés</h2>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem est incidunt libero ex cum ad eius ipsum, adipisci blanditiis placeat illum quibusdam, reiciendis quis velit iure voluptatum pariatur ea commodi obcaecati nisi vitae. Reiciendis perferendis quos necessitatibus minima sapiente nisi, magnam est ut, odio eveniet laborum nihil quidem. Necessitatibus maxime quos exercitationem velit nam inventore illo maiores tempora totam aliquam facere excepturi ipsam neque illum, consectetur sit. Facilis praesentium exercitationem qui natus earum accusantium dolorum quis accusamus, veritatis sequi. A.</p>
