@@ -37,11 +37,6 @@ html, body, #__nuxt, #__layout {
     padding-top: 100px;
     padding-bottom: 20px;
   
-    @include media-breakpoint-up(md) {    
-      padding-bottom: 3333px;
-      margin-bottom: -3333px;
-    }
-  
     .inner {
   
       max-width: 100%;
@@ -66,7 +61,7 @@ html, body, #__nuxt, #__layout {
 
   article, form {
       padding-top: 100px;
-      max-width: 690px;
+      max-width: 70%;
       margin: 0 auto;
 
       section {

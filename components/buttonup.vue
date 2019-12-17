@@ -3,7 +3,7 @@
         @click="scrolltop" 
         id="btnUp" 
         class="hidden">
-            <img src="@/static/img/up.svg" alt="">
+            <img aria-hidden="true" src="@/static/img/up.svg" alt="">
             <span class="sr-only">Retour en haut</span>
     </button>
 </template>

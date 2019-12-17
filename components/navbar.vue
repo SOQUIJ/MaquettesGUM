@@ -32,6 +32,9 @@
         <li class="breadcrumb-item active" aria-current="page">Divorce</li>
       </ol>
     </nav>
+      <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+      </div>
   </header>    
 </template>
 
@@ -40,7 +43,7 @@ export default {
 
   mounted () {
 
-    this.animateElementsOnScroll();
+    this.animateElementsOnScroll();   
 
   },
   methods: {
@@ -58,9 +61,18 @@ export default {
              /* navBar.className =  ('fixed-top');*/
               btnUp.className = ('')
           }
+
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop,
+            height = document.documentElement.scrollHeight - document.documentElement.clientHeight,
+            scrolled = (winScroll / height) * 100;
+
+        document.getElementById("myBar").style.width = scrolled + "%";
+
+
       });
 
     }
+
   }    
 }
 </script>

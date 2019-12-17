@@ -2,11 +2,9 @@ html {
   scroll-behavior: smooth;
 }
 
-header.fixed-top {
-  transition: all 1s ease-out; 
-}
+header {     
 
-.navigation-principale {
+  .navigation-principale {
 
     height: 90px;
     line-height: 90px;
@@ -46,4 +44,18 @@ header.fixed-top {
 
   }
   
+}
 
+  /* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: #4caf50;
+  width: 0%;
+}
