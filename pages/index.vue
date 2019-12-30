@@ -16,6 +16,7 @@
                            <li><nuxt-link to="formulaire">Formulaire</nuxt-link></li> 
                            <li><nuxt-link to="information">Information qualifiée</nuxt-link></li>
                            <li><nuxt-link to="nonqualifie">Information non qualifiée</nuxt-link></li>
+                           <li><nuxt-link to="vignettes">Vignettes</nuxt-link></li>
                         </ul>
 
                     </article>

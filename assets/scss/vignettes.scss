@@ -1,0 +1,73 @@
+@mixin after($num) {
+    &:nth-child(n+#{$num + 1}) {
+      @content
+     }
+}
+
+
+
+.vignettes {
+
+    text-align: center;
+
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        
+        li {
+            
+            @include media-breakpoint-up(md) {
+
+                float: left;
+                $largeur-vignette: 31.532%;
+                $marge-vignette: 2.703%;  
+                width: $largeur_vignette;           
+                margin-right: $marge-vignette;
+                margin-bottom: $marge-vignette;
+
+                &:nth-child(3) {
+
+                    margin-right: 0;
+               
+                }
+
+                &:nth-child(4) {
+
+                    margin-left: $largeur-vignette / 2;
+            
+                }  
+
+            }            
+
+            a {
+
+                display: block;
+                border: 1px solid #DAE6F0;
+                border-radius: 5px;                 
+                height: 300px;
+                text-align: center;
+                color: black;                  
+                transition: all .3s ease-in-out;
+
+                .inner {
+
+                    padding: 20px;
+   
+                }
+
+                &:hover {
+                    text-decoration: none;
+                    background: #EFEFEF;
+                    color: black;
+                }
+
+                img {
+                    display: block;
+                    margin: 0 auto;
+                }
+            }          
+        }
+    }
+}
