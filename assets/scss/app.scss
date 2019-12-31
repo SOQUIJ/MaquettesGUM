@@ -28,6 +28,14 @@ $btn-line-height:             72px;
 $btn-border-radius:           8px;
 $btn-border-width:            3px;
 
+// compte le nombre d'enfants -- utile pour les vignettes notamment
+@mixin has-nth($expression, $element: '*') {
+  &:nth-last-child(#{$expression}):first-child,
+  &:nth-last-child(#{$expression}):first-child ~ #{$element} {
+    @content;
+  }
+}
+
 // All of bootstrap
 @import "node_modules/bootstrap/scss/bootstrap";
 

@@ -16,14 +16,14 @@ html, body, #__nuxt, #__layout {
       background: linear-gradient(90deg, rgba(34,54,84,1) 41%, rgba(255,255,255,1) 41%);
     }
 
-    header {
+ /*   header {
       @include media-breakpoint-up(md) {    
         background: rgba(255,255,255,1);
         background: linear-gradient(90deg, rgba(34,54,84,1) 41%, rgba(255,255,255,1) 41%);
-      }    
+      }   
 
     }
-  
+ */ 
     .container {
   
       @include media-breakpoint-up(sm) {    

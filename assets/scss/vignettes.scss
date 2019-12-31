@@ -1,6 +1,11 @@
 .vignettes {
 
     text-align: center;
+    padding-top:100px;
+
+    h1 {
+        color:black;
+    }
 
 
     ul {
@@ -15,20 +20,20 @@
             @include media-breakpoint-between(sm, md) {
 
                 float: left;
-                $largeur-vignette-md: 48%;
-                $marge-vignette-md: 4%;  
-                width: $largeur_vignette-md;           
-                margin-right: $marge-vignette-md;
-                margin-bottom: $marge-vignette-md;
+                $largeur-vignette: 48%;
+                $marge-vignette: 4%;  
+                width: $largeur_vignette;           
+                margin-right: $marge-vignette;
+                margin-bottom: $marge-vignette;
 
                 &:nth-child(even) {
 
                     margin-right: 0;
                 }
 
-                &:nth-child(5) {
+                &:last-child:nth-child(odd) {
 
-                    margin-left: ($largeur-vignette-md / 2) + 2.5;
+                    margin-left: ($largeur-vignette / 2) + 2.5;
                     margin-right: 0;
             
                 }
@@ -44,17 +49,30 @@
                 margin-right: $marge-vignette;
                 margin-bottom: $marge-vignette;
 
-                &:nth-child(3) {
-
+                &:nth-child(3n) {
                     margin-right: 0;
-               
                 }
 
-                &:nth-child(4) {
 
-                    margin-left: $largeur-vignette / 2;
-            
-                }  
+                // s'il y a 5 vignettes alors on centre la 4eme vignette
+                @include has-nth(5, 'li') { 
+
+                    &:nth-child(4) {
+
+                        margin-left: $largeur-vignette / 2;
+                    }
+
+                }
+                
+                // s'il y a 4 vignettes alors on centre la 4eme vignette
+                @include has-nth(4, 'li') { 
+
+                    &:nth-child(4) {
+
+                        margin-left: $largeur-vignette + 2.8;
+                    }
+
+                }                  
 
             }            
 
@@ -69,7 +87,7 @@
                 position: relative;
                 top: 0;                
                 transition: all .3s ease-in-out;
-
+                
                 .inner {
 
                     padding: 36px;
@@ -94,20 +112,21 @@
                         letter-spacing: 0.16px;
                         color: #223654;                  
                     }
-                   
-   
                 }
 
-                &:hover {
+                &:hover, &:focus, &:active {
                     text-decoration: none;
-                    border-color: #3374CC;
                     top: -5px;
-                    opacity: 80%;
-                }
+                    outline: none;
+                    border-color: #84ABE0;
+                    
+                    h2, p {
+                        color: #2B7DD6
+                    }
 
-                img {
-                    display: block;
-                    margin: 0 auto;
+                    img {
+                        filter: saturate(7.7);  // TODO Remplacer par 100% opacité avec les bonnes images -- confirmer avec Jordane
+                    }
                 }
             }          
         }

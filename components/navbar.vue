@@ -3,7 +3,7 @@
     <nav class="container navigation-principale" aria-label="Navigation principale">
       <div class="row">
         <div class="col-2 col-sm-4 col-md-4">
-          <nuxt-link class="logo" to="/"><img src="@/static/img/logo_white.png" alt=""><span class="sr-only">Page d'accueil du GUM</span></nuxt-link>
+          <nuxt-link class="logo" to="/"><img src="@/static/img/logo.png" alt=""><span class="sr-only">Page d'accueil du GUM</span></nuxt-link>
         </div>
         <div class="col-10 col-sm-8 col-md-8 nav-droite">
           <ul>
@@ -76,4 +76,12 @@ export default {
   }    
 }
 </script>
+
+<style lang="scss">
+
+#navBar {
+  background: white;
+}
+  
+</style>
 

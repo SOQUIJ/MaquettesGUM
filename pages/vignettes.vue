@@ -1,6 +1,11 @@
 <template>
+<div>
+
+<navbar />
     <main class="container vh-100">
         <div class="vignettes">
+            
+            <H1>Lorem ipsum dolor sit amet.</H1>
 
             <ul>
                 <li>
@@ -39,23 +44,26 @@
                         </div>
                     </a>
                 </li>
-                <li>
-                    <a href="">
-                        <div class="inner"> 
-                            <img src="../static/img/tribunal.png" aria-hidden="true" alt="Image décorative">
-                            <h2>Tribunal</h2>
-                            <p>Procédures, Préparation, Déroulement de l’audience</p>
-                        </div>
-                    </a>
-                </li>
+
+
+
             </ul>
             
         </div>     
     </main>
+
+</div>
+
 </template>
 
 <script>
+import navbar from "@/components/navbar"
+
+
 export default {
+  components: {
+    navbar
+  },
     head: {
         bodyAttrs: {
             class: 'intro'
