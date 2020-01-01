@@ -24,13 +24,16 @@
       </div>
     </nav>
     <nav aria-label="breadcrumb" class="bg-qc-ca">
-      <ol class="breadcrumb container">
-        <li class="breadcrumb-item">
-          <nuxt-link to="/">Accueil</nuxt-link>
-        </li>
-        <li class="breadcrumb-item"><a href="#">Famille</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Divorce</li>
-      </ol>
+      <div class="container">
+        <ol class="breadcrumb container">
+          <li class="breadcrumb-item">
+            <nuxt-link to="/">Accueil</nuxt-link>
+          </li>
+          <li class="breadcrumb-item"><a href="#">Famille</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Divorce</li>
+        </ol>
+        <formRecherche></formRecherche>
+      </div>   
     </nav>
       <div class="progress-container">
         <div class="progress-bar" id="myBar"></div>
@@ -39,8 +42,13 @@
 </template>
 
 <script>
-export default {
 
+import formRecherche from '@/components/chercher'
+
+export default {
+  components: {
+    formRecherche
+  },
   mounted () {
 
     this.animateElementsOnScroll();   
@@ -81,6 +89,10 @@ export default {
 
 #navBar {
   background: white;
+}
+
+nav[aria-label="breadcrumb"] > .container {
+  position: relative;
 }
   
 </style>
