@@ -2,7 +2,7 @@
     <form role="search">
 
         <label>
-            <img v-if="searchNotVisible" src="../static/img/search.svg" aria-hidden="true" alt="Loupe" />
+            <img class="loupe" v-if="searchNotVisible" src="../static/img/search.svg" aria-hidden="true" alt="Loupe" />
             <span class="sr-only">Chercher</span>
             <input @focus="hideImg" @blur="hideImg" type="search" placeholder="Rechercher les resources du gum">
         </label>
@@ -37,11 +37,8 @@ export default {
 <style lang="scss">
 
     form[role="search"] {
-        position: absolute;
-        top: 10px;
-        right: 20px;
 
-        img {
+        img.loupe {
 
             cursor:pointer;
         }

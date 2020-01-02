@@ -43,7 +43,7 @@
 </div>
 </template>
 <script>
-import navbar from '@/components/navbar'
+
 import btnup from '@/components/buttonup'
 
 export default {
@@ -59,7 +59,7 @@ export default {
                
     },
     components: {
-        navbar,
+
         btnup
     },
 

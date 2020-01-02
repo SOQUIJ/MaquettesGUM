@@ -3,7 +3,7 @@
 
 <navbar />
     <main class="container vh-100">
-        <div class="vignettes">
+        <div class="vignettes container-1110">
             
             <H1>Lorem ipsum dolor sit amet.</H1>
 
@@ -57,13 +57,8 @@
 </template>
 
 <script>
-import navbar from "@/components/navbar"
-
 
 export default {
-  components: {
-    navbar
-  },
     head: {
         bodyAttrs: {
             class: 'intro'
@@ -81,7 +76,6 @@ export default {
             
             .vignettes {
 
-                max-width: 1110px;
                 margin: 0 auto;
 
             }

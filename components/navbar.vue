@@ -87,13 +87,26 @@ export default {
 
 <style lang="scss">
 
-#navBar {
+header#navBar {
+
   background: white;
+
+  nav[aria-label="breadcrumb"] > .container {
+
+    // Positionner le formulaire de recherche dans le header
+    position: relative;
+    form[role="search"] {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+  }
 }
 
-nav[aria-label="breadcrumb"] > .container {
-  position: relative;
-}
+
+
+
+
   
 </style>
 
