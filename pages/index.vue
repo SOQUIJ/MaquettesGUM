@@ -1,5 +1,5 @@
 <template>
-    <div class="accueil h-100">
+    <div class="accueil">
         <navbar />
         <main class="container">
 
@@ -31,6 +31,13 @@
 
 export default {
 
+    head: {
+
+        bodyAttrs: {
+            class: 'home'
+        }
+    },
+
     components: {
 
     }
@@ -38,7 +45,34 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
+
+    body.home  {
+
+        padding-top: 0;
+
+        header {
+            position: static !important;
+
+        }
+
+        main {
+
+            padding-bottom: 120px;
+
+            .col-gauche {
+
+                .inner {
+                    position: static;
+                }
+
+            }
+
+
+        }
+
+        
+    }
 
 </style>

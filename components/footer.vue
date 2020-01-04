@@ -71,7 +71,7 @@
                         <li><a href="#">À propos de Québec.ca</a></li>
                     </ul>
 
-                    <p><img src="../static/img/logo_qc-footer.png" alt="Logo du gouvernement du Québec"></p>
+                    <p class="mb-24"><a href="#"><img src="../static/img/logo_qc-footer.png" alt="Logo du gouvernement du Québec"></a></p>
 
                     <p class="lien-gouv-quebec-footer"><a href="#">© Gouvernement du Québec, 2020. Propulsé par SOQUIJ</a></p>
 
@@ -88,7 +88,7 @@ footer {
              
     position: relative;
     z-index: 1;
-    
+
     section.footer-main {
 
         background: #1D2E47;
@@ -124,7 +124,7 @@ footer {
             ul {
 
                 list-style: none;
-                margin:0;
+                margin: 0;
                 padding: 0;
 
                 li {
@@ -139,7 +139,7 @@ footer {
 
             .logos-participation {
 
-                margin-bottom: 24px;
+                margin-bottom: 80px;
 
                 a:first-child {
 
@@ -167,7 +167,7 @@ footer {
 
             ul {
 
-                margin: 0;
+                margin: 0 0 24px 0;
                 padding: 0;
                 list-style: none;
 
