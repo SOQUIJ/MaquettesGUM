@@ -1,6 +1,5 @@
 <template>
 <div>
-    <navbar />
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-gauche text-white">

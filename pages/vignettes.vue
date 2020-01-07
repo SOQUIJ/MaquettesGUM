@@ -1,7 +1,5 @@
 <template>
 <div>
-
-<navbar />
     <main class="container vh-100">
         <div class="vignettes container-1110">
             

@@ -1,6 +1,5 @@
 <template>
     <div class="accueil">
-        <navbar />
         <main class="container">
 
             <div class="row">
@@ -36,12 +35,7 @@ export default {
         bodyAttrs: {
             class: 'home'
         }
-    },
-
-    components: {
-
     }
-    
 }
 </script>
 
